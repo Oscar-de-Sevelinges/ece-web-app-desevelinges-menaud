@@ -11,7 +11,7 @@
     3. Définir un script NPM  
     
 ### 3. Créer un serveur HTTP
-    créer un serveur htpp qui ajoute depuis un script en js du code html à la page
+    créer un serveur http qui ajoute depuis un script en js du code html à la page
 
 ### Contributors
 
