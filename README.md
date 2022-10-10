@@ -19,8 +19,11 @@
 
 ### 5. Création d'une application en utilisant plusieurs chemins
 1. /
-1. /hello?name=yourName
+1. /hello?name=yourName (message spéciaux pour Oscar, Romain et Paul)
 1. /random/path
+
+### 6. Lecture depuis un fichier JSON
+affichage des informations du fichier json en ajoutant son path à l'url (./content/aboutOscar)
 
 ### Contributors
 
