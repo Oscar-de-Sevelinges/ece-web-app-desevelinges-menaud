@@ -1,6 +1,6 @@
 const url = require('url')
 const qs = require('querystring');
-const aboutOscar = require('./content/about');
+const aboutOscar = require('../content/about');
 
 module.exports = {
     serverHandle: function (req, res) {
