@@ -25,6 +25,9 @@
 ### 6. Lecture depuis un fichier JSON
 affichage des informations du fichier json en ajoutant son path à l'url (./content/aboutOscar)
 
+### 7. Test manuel avec curl
+Depuis le terminal, avec le serveur lancé, faire : curl -X POST -d "name=YourName" http://localhost:8000
+
 ### Contributors
 
 - Oscar de Sevelinges <oscar.desevelinges@edu.ece.fr>

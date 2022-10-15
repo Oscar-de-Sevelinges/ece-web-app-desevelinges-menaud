@@ -26,20 +26,20 @@ module.exports = {
 
         res.writeHead(200, {'Content-Type': 'text/plain'})
         if(path === '/') {
-            res.write('In the URL, add /hello?name=yourname to see a personalized message.\n\nAnother message will be printed with the names of the repository owners and contributors (Oscar, Romain and Paul)')
+            res.write('In the URL, add /hello?name=yourname to see a personalized message.\n\nAnother message will be printed with the names of the repository owners and contributors (Oscar, Romain and Paul)\n')
         }
         else if(path === '/hello' && 'name' in params) {
             if(params['name'] == 'Oscar') {
-                res.write('Message for the repository owner Oscar (try with Romain or Paul)')
+                res.write('Message for the repository owner Oscar (try with Romain or Paul)\n')
             }
             else if(params['name'] == 'Romain') {
-                res.write('Message for the repository owner Romain (try with Oscar or Paul)')
+                res.write('Message for the repository owner Romain (try with Oscar or Paul)\n')
             }
             else if(params['name'] == 'Paul') {
-                res.write('Message for the contributor and teacher Paul (try with Oscar or Romain)')
+                res.write('Message for the contributor and teacher Paul (try with Oscar or Romain)\n')
             }
             else {
-                res.write('Hello ' + params['name'])
+                res.write('Hello ' + params['name'] + '\n')
             }
         }
         else if(path === '/hello'){
@@ -50,7 +50,7 @@ module.exports = {
             res.write(aboutOscar.name + ' is ' + aboutOscar.age + ' years old and lives in ' + aboutOscar.city + '.\n')
         }
         else {
-            res.write('404 Page not found')
+            res.write('404 Page not found\n')
         }
         res.end()
     }
