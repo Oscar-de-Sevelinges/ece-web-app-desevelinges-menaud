@@ -30,7 +30,11 @@ affichage des informations du fichier json en ajoutant son path à l'url (./cont
 
 ### 7. Test manuel avec swagger inspector
 
-Depuis le terminal, avec le serveur lancé (npm run develop) : https://inspector.swagger.io/builder
+Depuis le terminal, avec le serveur lancé (npm run develop) : https://inspector.swagger.io/builder pour essayer des requêtes
+
+- GET `/articles` - list all articles
+- POST `/articles` - add a new article
+- GET `/articles/:articleId` - get an article by ID (non fonctionnel avec ID)
 
 ### Contributors
 
