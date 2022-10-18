@@ -1,6 +1,5 @@
 import url from 'url';
 import qs from 'querystring';
-import express from 'express';
 
 import {apiHandler} from './api.js';
 
