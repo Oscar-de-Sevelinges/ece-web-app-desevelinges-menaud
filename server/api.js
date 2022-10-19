@@ -7,7 +7,7 @@ export function apiHandler(req, res) {
     res.write('API request received\n\n');
     /*const app = express();
     app.get('/api/articles', function(req, res) {
-        res.send('Fetching articles');
+        res.write('Fetching articles');
     });*/
     if (req.method === 'GET') {
         // list all articles with GET http://localhost:8000/api/articles
@@ -18,7 +18,7 @@ export function apiHandler(req, res) {
                 res.write(db.articles[i].id + '\t' + db.articles[i].title + '\t' + db.articles[i].content + '\n');
             }
         }
-        else if (req.url === '/api/articles/:articleId') {
+        if (req.url === '/api/articles/:articleId') {
             // print the article with the given id
             res.write('Displaying the article with the given id :\n\n\nID\tTitle\t\t\tContent\n\n');
             for (let i = 0; i < db.articles.length; i++) {
