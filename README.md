@@ -1,40 +1,18 @@
-# web-tech Node.JS
+# web-tech
 
-## Etapes du lab
+## Next.js web-app
 
-### 1. Initialisation du projet sur git
+Début d'une application web avec Next.js.
 
-### 2. Création d'un script Node.JS
+1. Lancer la commande ```npm run build``` puis ```npm run start``` depuis la ligne de commande.
+1. Lancer [http://localhost:3000](http://localhost:3000)
+1. Explorer les différentes pages
+    1. [index.js](http://localhost:3000/index.js) : accueil du site
+    1. [about.js](http://localhost:3000/about.js) : à propos du site
+    1. [contacts.js](http://localhost:3000/contacts.js) : contacts du site
+    1. [articlesIndex.js](http://localhost:3000/articles/articlesIndex.js) : menu des articles du site
 
-1. VS Code ez
-2. Création d'un script
-3. Définir un script NPM
-
-### 3. Créer un serveur HTTP
-
-créer un serveur http qui lit depuis un script en js l'url du site
-le serveur peut également récupérer des paramètres dans l'url comme le nom de l'utilisateur
-organisation du code en modules
-
-### 4. Intégration de Nodemon
-
-### 5. Création d'une application en utilisant plusieurs chemins
-
-1. /
-1. /hello?name=yourName (message spéciaux pour Oscar, Romain et Paul)
-1. /random/path
-
-### 6. Lecture depuis un fichier JSON
-
-affichage des informations du fichier json en ajoutant son path à l'url (./content/aboutOscar)
-
-### 7. Test manuel avec swagger inspector
-
-Depuis le terminal, avec le serveur lancé (npm run develop) : https://inspector.swagger.io/builder pour essayer des requêtes
-
-- GET `/articles` - list all articles
-- POST `/articles` - add a new article
-- GET `/articles/:articleId` - get an article by ID (non fonctionnel avec ID)
+        Liste des pages menant aux articles du site et à leurs informations
 
 ### Contributors
 
