@@ -1,26 +1,27 @@
 import Link from "next/link"
+import styles from "../styles/Home.module.css"
 
 function HomePage() {
   return (
     <ul>
       <li>
         <Link href="/">
-          <a>Home</a>
+          <a className={styles.test}>Home</a>
         </Link>
       </li>
       <li>
         <Link href="/articles/articlesIndex">
-          <a>Articles</a>
+          <a className={styles.test}>Articles</a>
         </Link>
       </li>
       <li>
         <Link href="/contacts">
-          <a>Contacts</a>
+          <a className={styles.test}>Contacts</a>
         </Link>
       </li>
       <li>
         <Link href="/about">
-          <a>About</a>
+          <a className={styles.test}>About</a>
         </Link>
       </li>
     </ul>
