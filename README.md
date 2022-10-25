@@ -4,7 +4,7 @@
 
 Début d'une application web avec Next.js.
 
-1. Lancer la commande ```npm run build``` puis ```npm run start``` depuis la ligne de commande.
+1. Lancer la commande ```npm run dev``` depuis la ligne de commande.
 1. Lancer [http://localhost:3000](http://localhost:3000)
 1. Explorer les différentes pages
     1. [index.js](http://localhost:3000/index.js) : accueil du site
