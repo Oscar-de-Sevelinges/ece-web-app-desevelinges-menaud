@@ -2,7 +2,6 @@ import Link from "next/link";
 
 function Articles() {
   return (
-    // dummy info about articles
     <ul>
         <li>
             <Link href="/articles/1">
