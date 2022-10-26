@@ -1,8 +1,3 @@
-import Link from "next/link"
-import styles from "../styles/Home.module.css"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
-
 function HomePage() {
   return (
     <div>
