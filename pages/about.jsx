@@ -1,9 +1,9 @@
 function About() {
   return (
-    <div>
+    <main>
       <h1>About</h1>
-      This is the about page
-    </div>
+      <p>This is the about page</p>
+    </main>
   )
 }
 

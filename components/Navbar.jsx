@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
     return (
@@ -12,17 +12,17 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="./articles/articlesIndex">
+                    <Link href="../articles/articlesIndex">
                         <a className={styles.test}>Articles</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="./contacts">
+                    <Link href="../contacts">
                         <a className={styles.test}>Contacts</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="./about">
+                    <Link href="../about">
                         <a className={styles.test}>About</a>
                     </Link>
                 </li>
