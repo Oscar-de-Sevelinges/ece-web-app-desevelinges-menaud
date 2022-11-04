@@ -2,26 +2,26 @@ import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <div>
-            <ul>
-                <li>
+        <div className='text-xl'>
+            <ul className='display: flex'>
+                <li className='p-7 bg-blue-500 hover:bg-blue-700'>
                     <Link href="/">
-                        <a>Home</a>
+                        <a className='p-7'>Home</a>
                     </Link>
                 </li>
-                <li>
+                <li className='p-7 bg-blue-500 hover:bg-blue-700'>
                     <Link href="../articles/articlesIndex">
-                        <a>Articles</a>
+                        <a className='p-7'>Articles</a>
                     </Link>
                 </li>
-                <li>
+                <li className='p-7 bg-blue-500 hover:bg-blue-700'>
                     <Link href="../contacts">
-                        <a>Contacts</a>
+                        <a className='p-7'>Contacts</a>
                     </Link>
                 </li>
-                <li>
+                <li className='p-7 bg-blue-500 hover:bg-blue-700'>
                     <Link href="../about">
-                        <a>About</a>
+                        <a className='p-7'>About</a>
                     </Link>
                 </li>
             </ul>
