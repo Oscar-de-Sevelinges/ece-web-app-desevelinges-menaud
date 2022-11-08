@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
     const year = new Date().getFullYear();
     return (
-        <div className='sticky top-[100vh]'>
+        <div className='sticky top-[100vh] pb-2'>
             <footer>
                 <Link href="https://www.linkedin.com/in/oscar-de-sevelinges-3a758a1b6/">
                     <a target="_blank" className='inline'>Oscar de Sevelinges</a>
