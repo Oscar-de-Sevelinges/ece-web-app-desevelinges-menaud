@@ -4,7 +4,6 @@ import Title from "./Title";
 
 const Layout = ({ children }) => {
     return (
-
         <div className="content h-screen bg-gray-500">
             <Title />
             <Navbar />

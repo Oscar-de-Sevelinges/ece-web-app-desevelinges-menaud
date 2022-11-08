@@ -1,10 +1,19 @@
 import Link from "next/link";
 
-function Articles() {
+export const getStaticProps = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await res.json();
+
+    return {
+        props: { users: data },
+    };
+};
+
+function Articles({ users }) {
     return (
         <>
             <p className="text-green-600">Articles :</p>
-            <ul>
+            <ul className="font-bold">
                 <li>
                     <Link href="/articles/1">
                         <a>Article 1</a>
@@ -21,6 +30,14 @@ function Articles() {
                     </Link>
                 </li>
             </ul>
+            <p className="text-green-600">Customers :</p>
+            {users.map((user) => (
+                <ul key={user.id}>
+                    <li>
+                        <a>{user.name}</a>
+                    </li>
+                </ul>
+            ))}
         </>
     );
 }
