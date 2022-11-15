@@ -1,11 +1,9 @@
-import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Title from "./Title";
+import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
     return (
         <div className="content h-screen bg-gray-500">
-            <Title />
             <Navbar />
             {children}
             <Footer />
