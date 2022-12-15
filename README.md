@@ -33,7 +33,8 @@
 
 ## Authors
 
-*name, email, ...*
+Oscar de Sevelinges [email](mailto:oscar.desevelinges@edu.ece.fr)  
+Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 ## Tasks
   
