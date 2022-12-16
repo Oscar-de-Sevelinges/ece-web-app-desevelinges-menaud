@@ -7,10 +7,10 @@ export default function Article({ article }) {
           <p className="text-lg leading-relaxed mb-4">{article.content}</p>
           <div className="flex items-center text-sm font-medium text-gray-600">
             <div className="mr-2">
-              Published on {article.publishDate}
+              Published on {article.created_at}
             </div>
             <div>
-              By {article.author}
+              By {article.autor}
             </div>
           </div>
         </div>
