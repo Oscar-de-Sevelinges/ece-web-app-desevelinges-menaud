@@ -1,11 +1,10 @@
-import { SupabaseClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 import { useEffect, useState } from 'react'
-import Article from '../components/Article'
+import Article from '../../components/Article'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseUrl = 'https://ffcurvlfawjgbaatfpbc.supabase.co'
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-const supabase = new SupabaseClient(supabaseUrl, supabaseKey)
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 export default function ArticlePage({ slug }) {
   const [article, setArticle] = useState(null)

@@ -1,28 +1,32 @@
-import { SupabaseClient } from '@supabase/supabase-js'
 import { useEffect, useState } from 'react'
 import Article from '../components/Article'
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-const supabase = new SupabaseClient(supabaseUrl, supabaseKey)
+import supabase from "../utils/supabaseClient"
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState([])
+  const [fetchError, setFetchError] = useState(null)
 
   useEffect(() => {
-    async function fetchData() {
-      const { body } = await supabase.from('articles').select('*')
-      setArticles(body)
+    const fetchData = async () => {
+      const { data, error } = await supabase.from('articles').select()
+      if (error) {
+        setFetchError('Error fetching articles')
+        setArticles(null)
+        console.log(error)
+      }
+      if (data) {
+        setArticles(data)
+        setFetchError(null)
+      }
     }
     fetchData()
   }, [])
 
   return (
     <div>
-      {articles.map((article) => (
-        <Article key={article.id} {...article} />
-      ))}
+      {fetchError && (<p>{fetchError}</p>)}
+      {articles && (
+        articles.map((article) => <Article {...article} />))}
     </div>
   )
 }
