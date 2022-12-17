@@ -1,19 +1,31 @@
-import { useRouter } from 'next/router';
-import Article from '../../components/Article';
-import Layout from '../../components/Layout';
+import { SupabaseClient } from '@supabase/supabase-js'
+import { useEffect, useState } from 'react'
+import Article from '../components/Article'
 
-function ArticlePage() {
-  const router = useRouter();
-  const { slug } = router.query;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-  // Retrieve the data for the specific article based on the slug value
-  const article = getArticleData(slug);
+const supabase = new SupabaseClient(supabaseUrl, supabaseKey)
 
-  return (
-    <Layout>
-      <Article article={article} />
-    </Layout>
-  );
+export default function ArticlePage({ slug }) {
+  const [article, setArticle] = useState(null)
+
+  useEffect(() => {
+    async function fetchData() {
+      const { body } = await supabase.from('articles').eq('slug', slug).select('*')
+      setArticle(body[0])
+    }
+    useEffect(() => {
+      async function fetchData() {
+        const { body } = await supabase.from('articles').eq('slug', slug).select('*')
+        setArticle(body[0])
+      }
+      fetchData()
+    }, [slug])
+    return (
+      <div>
+        {article ? <Article {...article} /> : <div>Loading...</div>}
+      </div>
+    )
+  })
 }
-
-export default ArticlePage;

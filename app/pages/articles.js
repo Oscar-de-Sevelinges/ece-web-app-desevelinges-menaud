@@ -1,12 +1,28 @@
-import React from "react";
+import { SupabaseClient } from '@supabase/supabase-js'
+import { useEffect, useState } from 'react'
+import Article from '../components/Article'
 
-export default function Articles() {
-    return (
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-4">Articles</h1>
-          <p className="text-xl mb-4">
-            This is the Articles page.
-          </p>
-        </div>
-    );
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+const supabase = new SupabaseClient(supabaseUrl, supabaseKey)
+
+export default function ArticlesPage() {
+  const [articles, setArticles] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      const { body } = await supabase.from('articles').select('*')
+      setArticles(body)
+    }
+    fetchData()
+  }, [])
+
+  return (
+    <div>
+      {articles.map((article) => (
+        <Article key={article.id} {...article} />
+      ))}
+    </div>
+  )
 }
