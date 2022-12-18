@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Article from '../components/Article'
-import supabase from "../utils/supabaseClient"
+import supabase from "./api/supabase"
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState([])
@@ -8,15 +8,17 @@ export default function ArticlesPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data, error } = await supabase.from('articles').select()
-      if (error) {
-        setFetchError('Error fetching articles')
-        setArticles(null)
-        console.log(error)
-      }
-      if (data) {
-        setArticles(data)
-        setFetchError(null)
+      if(supabase) {
+        const { data, error } = await supabase.from('articles').select()
+        if (error) {
+          setFetchError('Error fetching articles')
+          setArticles(null)
+          console.log(error)
+        }
+        if (data) {
+          setArticles(data)
+          setFetchError(null)
+        }
       }
     }
     fetchData()
@@ -26,7 +28,7 @@ export default function ArticlesPage() {
     <div>
       {fetchError && (<p>{fetchError}</p>)}
       {articles && (
-        articles.map((article) => <Article {...article} />))}
+        articles.map((article) => <Article key={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} />))}
     </div>
   )
 }
