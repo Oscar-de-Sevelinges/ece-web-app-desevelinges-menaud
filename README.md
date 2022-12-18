@@ -5,8 +5,8 @@
 
 ## Production
 
-- Vercel URL: https://...
-- Supabase project URL: https://app.supabase.com/project/...
+- Vercel URL: https://ece-web-app-desevelinges-menaud-69njurx5p-oscarui.vercel.app/
+- Supabase project URL: https://app.supabase.com/project/ffcurvlfawjgbaatfpbc
 
 ## Usage
 
@@ -41,15 +41,15 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 **Project management:**
 
 * Naming convention   
-  *place your graduation and comments*
+  5/5
 * Project structure   
-  *place your graduation and comments*
+  5/5 Respect du template fourni
 * Git   
-  *place your graduation and comments*
+  5/5 Utilisation du versioning avec git (commit, branches, pull...)
 * Code quality   
-  *place your graduation and comments*
+  5/5 Respect des conventions d'écriture (indentation, fonctions...)
 * Design, UX, and content   
-  *place your graduation and comments*
+  3/5 Design et expérince utilisateur basique
 
 **Application development:**
 
@@ -78,7 +78,7 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 * Gravatar integration   
   *place your graduation and comments*
 * Light/dark theme   
-  *place your graduation and comments*
+  5/5 Bouton pour l'activer/désactiver
 * Accent color selection   
   *place your graduation and comments*
 
