@@ -35,7 +35,12 @@ const Header = () => (
             <Link href="/articles" className="px-3 py-2 rounded-md text-sm font-medium leading-5 hover:text-white hover:bg-gray-700 focus:outline-none focus::text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                 Articles
             </Link>
-        </div>
+          </div>
+          <div className="flex-shrink-0 -ml-px">
+            <Link href="/login" className="px-3 py-2 rounded-md text-sm font-medium leading-5 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+              Login
+            </Link>
+          </div>
        </div>
       </div>
     </div>

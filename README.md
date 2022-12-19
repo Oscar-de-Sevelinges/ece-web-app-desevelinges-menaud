@@ -49,7 +49,7 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 * Code quality   
   5/5 Respect des conventions d'écriture (indentation, fonctions...)
 * Design, UX, and content   
-  3/5 Design et expérince utilisateur basique
+  3/5 Design et expérince utilisateur basiques
 
 **Application development:**
 

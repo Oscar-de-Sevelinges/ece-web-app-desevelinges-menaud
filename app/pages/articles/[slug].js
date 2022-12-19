@@ -1,30 +1,25 @@
-import { createClient } from '@supabase/supabase-js'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import { Client } from 'supabase-client'
 import Article from '../../components/Article'
 
-const supabaseUrl = 'https://ffcurvlfawjgbaatfpbc.supabase.co'
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
-
-export default function ArticlePage({ slug }) {
+export default function ArticlePage() {
   const [article, setArticle] = useState(null)
+  const router = useRouter()
+  const { slug } = router.query
 
   useEffect(() => {
-    async function fetchData() {
-      const { body } = await supabase.from('articles').eq('slug', slug).select('*')
-      setArticle(body[0])
-    }
-    useEffect(() => {
-      async function fetchData() {
-        const { body } = await supabase.from('articles').eq('slug', slug).select('*')
-        setArticle(body[0])
-      }
-      fetchData()
-    }, [slug])
-    return (
-      <div>
-        {article ? <Article {...article} /> : <div>Loading...</div>}
-      </div>
-    )
-  })
+    const supabase = Client.fromEnv();
+    supabase
+      .query(`SELECT * FROM articles WHERE id = '${slug}'`)
+      .then(({ data }) => {
+        setArticle(data[0]);
+      });
+  }, []);
+
+  return (
+    <div>
+      {article && <Article article={article} />}
+    </div>
+  )
 }
