@@ -4,9 +4,10 @@ import supabase from './api/supabase';
 export default function Login() {
   return (
     <Auth
-      className="w-1/2"
       supabaseClient={supabase}
       appearance={{ theme: ThemeSupa }}
+      providers={['google', 'github']}
+      theme="default"
     />
   )
 }
