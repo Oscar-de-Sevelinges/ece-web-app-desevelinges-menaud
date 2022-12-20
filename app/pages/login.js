@@ -6,7 +6,7 @@ export default function Login() {
     <Auth
       supabaseClient={supabase}
       appearance={{ theme: ThemeSupa }}
-      providers={['google', 'github']}
+      providers={['github']}
       theme="default"
     />
   )
