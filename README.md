@@ -86,3 +86,9 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 * Task title   
   *place your graduation and comments*
+
+
+TO DO
+CREATE USER
+UPDATE FIX (EMAIL AND AVATAR URL)
+DISPLAY USER INFOS
