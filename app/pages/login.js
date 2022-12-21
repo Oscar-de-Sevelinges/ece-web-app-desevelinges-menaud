@@ -10,7 +10,7 @@ const Login = () => {
     <div>
       {!session ? (
         <Auth
-          className="w-full h-full"
+          className="form-widget"
           supabaseClient={supabaseClient}
           appearance={{ theme: ThemeSupa }}
           theme="dark"
