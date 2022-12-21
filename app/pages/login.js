@@ -1,13 +1,26 @@
-import { Auth, ThemeSupa } from '@supabase/auth-ui-react';
-import supabase from './api/supabase';
+import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
+import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
+import Account from '../components/Account'
 
-export default function Login() {
+
+const Login = () => {
+  const session = useSession()
+  const supabaseClient = useSupabaseClient()
   return (
-    <Auth
-      supabaseClient={supabase}
-      appearance={{ theme: ThemeSupa }}
-      providers={['github']}
-      theme="default"
-    />
+    <div>
+      {!session ? (
+        <Auth
+          className="w-full h-full"
+          supabaseClient={supabaseClient}
+          appearance={{ theme: ThemeSupa }}
+          theme="dark"
+          providers={['github']}
+        />
+      ) : (
+        <Account session={session} />
+      )}
+    </div>
   )
 }
+
+export default Login
