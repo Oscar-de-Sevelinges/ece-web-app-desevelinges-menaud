@@ -57,11 +57,11 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="form-widget">
+    <div className="form-widget flex flex-col mx-auto my-auto">
       <div>
-        <label htmlFor="full_name">Full name</label>
+        <label htmlFor="full_name" className="mr-6">Full name</label>
         <input
-          className="text-black"
+          className="text-black w-32 rounded-md"
           id="full_name"
           type="text"
           value={full_name || ''}
@@ -69,9 +69,9 @@ export default function Account({ session }) {
         />
       </div>
       <div>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username" className="mr-5">Username</label>
         <input
-          className="text-black"
+          className="text-black w-32 rounded-md"
           id="username"
           type="text"
           value={username || ''}
@@ -79,9 +79,9 @@ export default function Account({ session }) {
         />
       </div>
 
-      <div>
+      <div className="p-4">
         <button
-          className="button primary block"
+          className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
           onClick={() => updateProfile({ username, full_name })}
           disabled={loading}
         >
@@ -89,8 +89,8 @@ export default function Account({ session }) {
         </button>
       </div>
 
-      <div>
-        <button className="button block" onClick={() => supabase.auth.signOut()}>
+      <div className="p-4">
+        <button className="button block bg-blue-500 text-white rounded-md px-4 py-2 w-32" onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>
       </div>
