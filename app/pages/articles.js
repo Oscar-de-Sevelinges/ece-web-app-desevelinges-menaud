@@ -28,7 +28,7 @@ export default function ArticlesPage() {
     <div>
       {fetchError && (<p>{fetchError}</p>)}
       {articles && (
-        articles.map((article) => <Article key={article.id} articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} />))}
+        articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} />))}
     </div>
   )
 }

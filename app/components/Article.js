@@ -5,7 +5,7 @@ import React from 'react';
 export default function Article({ key, articleID, title, content, autor, created_at }) {
   const createdAt = moment(created_at).format('DD/MM/YYYY');
     return (
-      <Link href={'/articles/' + articleID} key={key}>
+      <Link href={'/articles/' + articleID}>
         <div className="max-w-2xl mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold mb-4">{title}</h1>
           <p className="text-lg leading-relaxed mb-4">{content}</p>
