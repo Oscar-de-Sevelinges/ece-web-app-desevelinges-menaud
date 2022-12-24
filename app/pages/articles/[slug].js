@@ -1,7 +1,8 @@
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
 import moment from 'moment';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import supabase from '../api/supabase';
+import { CommentsList } from '../comments';
 
 export const getStaticPaths = async () => {
   const {data, error} = await supabase.from('articles').select()
@@ -69,6 +70,7 @@ const ArticlePage = (data) => {
       </div>
       <div className="max-w-2xl mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-4">Comments</h2>
+        <CommentsList />
         <form onSubmit={handleSubmit}>
           <textarea
             className="w-full border border-gray-300 rounded p-2 mb-4"
