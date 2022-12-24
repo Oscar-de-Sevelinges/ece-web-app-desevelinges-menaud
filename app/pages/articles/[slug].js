@@ -2,7 +2,7 @@ import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
 import moment from 'moment';
 import { useEffect, useState } from 'react';
 import supabase from '../api/supabase';
-import { CommentsList } from '../comments';
+import CommentsList from '../comments';
 
 export const getStaticPaths = async () => {
   const {data, error} = await supabase.from('articles').select()

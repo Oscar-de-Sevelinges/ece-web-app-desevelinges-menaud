@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Comment from '../components/Comment';
 import supabase from "./api/supabase";
 
-export const CommentsList = () => {
+export default function CommentsList() {
     const [comments, setComments] = useState([])
     const [fetchError, setFetchError] = useState(null)
 
@@ -34,4 +34,4 @@ export const CommentsList = () => {
           comments.map((comment) => <Comment content={comment.content} userID={comment.userID} created_at={comment.created_at} />))}
       </div>
     )
-  }
+}
