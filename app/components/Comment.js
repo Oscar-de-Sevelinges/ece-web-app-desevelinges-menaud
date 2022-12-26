@@ -26,7 +26,7 @@ export default function Comment({ content, userID, created_at }) {
     }, [])
 
     return (
-        <div>
+        <div className="pb-8">
             {fetchError && (<p>{fetchError}</p>)}
             {user && (
                 <p>{user.username}</p>

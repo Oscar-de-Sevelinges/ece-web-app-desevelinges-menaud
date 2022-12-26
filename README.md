@@ -30,6 +30,7 @@
   cd supabase
   docker compose up ...
   ```
+* sign in or log in to the app using email and password (issues with oauth providers outside localhost, on the hosted version of the website)
 
 ## Authors
 
@@ -89,4 +90,7 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 
 TO DO
-LOGIN WITH GITHUB DOESNT WORK WITH VERCEL : REDIRECT TO LOCALHOST (CHECK REDIRECT URL IN VERCEL)
+LOGIN WITH GITHUB DOESN'T WORK WITH VERCEL : REDIRECT TO LOCALHOST (CHECK REDIRECT URL IN VERCEL)
+supprimer un commentaire si c'est l'user correspondant
+empêcher la saisie d'un commentaire vide
+pareil pour article

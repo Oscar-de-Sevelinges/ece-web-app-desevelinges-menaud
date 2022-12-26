@@ -39,18 +39,25 @@ const ArticlePage = (data) => {
     const currentUrl = window.location.href;
     const parts = currentUrl.split('/');
     const aid = parts[parts.length - 1];
-    const { data, error } = await supabase
-      .from('comments')
-      .insert({
-        articleID: aid,
-        content: comment,
-        userID: session.user.id
-      })
-    if (error) {
-      console.log(error)
+    const trimmedComment = comment.trim()
+    if (trimmedComment !== '') {
+      const { data, error } = await supabase
+        .from('comments')
+        .insert({
+          articleID: aid,
+          content: comment,
+          userID: session.user.id
+        })
+      if (error) {
+        console.log(error)
+      }
+      if (data) {
+        console.log(data)
+      }
+      window.location.reload()
     }
-    if (data) {
-      console.log(data)
+    else {
+      window.alert('Please enter a comment')
     }
   }
 
@@ -71,9 +78,10 @@ const ArticlePage = (data) => {
       <div className="max-w-2xl mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-4">Comments</h2>
         <CommentsList />
-        <form onSubmit={handleSubmit}>
+        {session && (
+         <form onSubmit={handleSubmit}>
           <textarea
-            className="w-full border border-gray-300 rounded p-2 mb-4"
+            className="w-full border border-gray-300 rounded p-2 mb-4 text-black"
             placeholder="Add a comment"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
@@ -85,6 +93,7 @@ const ArticlePage = (data) => {
             Add comment
           </button>
         </form>
+        )}
       </div>
     </div>
   )
