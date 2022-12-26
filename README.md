@@ -92,5 +92,5 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 TO DO
 LOGIN WITH GITHUB DOESN'T WORK WITH VERCEL : REDIRECT TO LOCALHOST (CHECK REDIRECT URL IN VERCEL)
 supprimer un commentaire si c'est l'user correspondant
-empêcher la saisie d'un commentaire vide
-pareil pour article
+ajuster la taille des liens cliquable des articles
+darkmode fix

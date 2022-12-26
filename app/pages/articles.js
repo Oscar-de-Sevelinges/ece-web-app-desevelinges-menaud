@@ -59,9 +59,11 @@ export default function ArticlesPage() {
   return (
     <div>
       {fetchError && (<p>{fetchError}</p>)}
-      {articles && (
-        articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} />))
-      }
+      <div className="flex flex-col text-left">
+        {articles && (
+          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} />))
+        }
+      </div>
       {session && (
         <form className="pt-8" onSubmit={handleSubmit}>
           <textarea
