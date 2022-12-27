@@ -20,8 +20,7 @@ export default function Article({ key, articleID, title, content, autorID, autor
     window.location.reload();
   }
 
-  console.log(session.user.id);
-  console.log(autorID);
+  
 
     return (
       <div className="pb-8">
