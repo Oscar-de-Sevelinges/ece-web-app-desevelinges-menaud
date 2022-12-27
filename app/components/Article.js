@@ -20,8 +20,6 @@ export default function Article({ key, articleID, title, content, autorID, autor
     window.location.reload();
   }
 
-  
-
     return (
       <div className="pb-8">
         <Link href={'/articles/' + articleID} className="inline-block rounded-t-l rounded-b-r shadow-md">
@@ -38,7 +36,7 @@ export default function Article({ key, articleID, title, content, autorID, autor
             </div>
           </div>
         </Link>
-        {session.user.id === autorID && (
+        {session && session.user.id === autorID && (
           <button
             className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
             type="submit"

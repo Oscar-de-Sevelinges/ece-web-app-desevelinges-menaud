@@ -46,7 +46,7 @@ export default function Comment({ commentID, content, userID, created_at }) {
             )}
             <p>{content}</p>
             <p>{createdAt}</p>
-            {session.user.id === userID && (
+            {session && session.user.id === userID && (
                 <button
                     className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
                     type="submit"
