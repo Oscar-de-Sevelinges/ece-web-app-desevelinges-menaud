@@ -94,7 +94,7 @@ modifier un article par l'auteur
 supprimer un article si c'est l'user correspondant
 pareil pour commentaire
 mettre un compteur pour afficher le nombre de commentaires
+fix le footer
+styles des commentaires
 
-LOGIN WITH GITHUB DOESN'T WORK WITH VERCEL : REDIRECT TO LOCALHOST (CHECK REDIRECT URL IN VERCEL)
-ajuster la taille des liens cliquable des articles
 darkmode fix

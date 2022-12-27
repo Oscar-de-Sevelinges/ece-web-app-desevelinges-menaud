@@ -31,7 +31,7 @@ export default function CommentsList() {
       <div>
         {fetchError && (<p>{fetchError}</p>)}
         {comments && (
-          comments.map((comment) => <Comment content={comment.content} userID={comment.userID} created_at={comment.created_at} />))}
+          comments.map((comment) => <Comment commentID={comment.id} content={comment.content} userID={comment.userID} created_at={comment.created_at} />))}
       </div>
     )
 }
