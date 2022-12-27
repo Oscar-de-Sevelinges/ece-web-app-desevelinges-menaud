@@ -3,10 +3,25 @@ import moment from 'moment';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import supabase from "../pages/api/supabase";
+import Edit from "../pages/articles/edit";
 
-export default function Article({ key, articleID, title, content, autor, created_at }) {
+export default function Article({ key, articleID, title, content, autorID, autor, created_at }) {
   const createdAt = moment(created_at).format('DD/MM/YYYY');
   const session = useSession();
+
+  const handleDelete = async () => {
+    const { data, error } = await supabase.from('articles').delete().eq('id', articleID);
+    if (error) {
+      console.log(error);
+    }
+    if (data) {
+      console.log(data);
+    }
+    window.location.reload();
+  }
+
+  console.log(session.user.id);
+  console.log(autorID);
 
     return (
       <div className="pb-8">
@@ -24,6 +39,26 @@ export default function Article({ key, articleID, title, content, autor, created
             </div>
           </div>
         </Link>
+        {session.user.id === autorID && (
+          <button
+            className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
+            type="submit"
+            onClick={handleDelete}
+          >
+            Delete article
+          </button>
+        )}
       </div>
     );
 }
+
+/*{session.user.id === autor && (
+  <Link href={'/articles/' + articleID + '/edit'}>
+    <button
+      className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
+      type="submit"
+    >
+      Edit article
+    </button>
+  </Link>
+)}*/

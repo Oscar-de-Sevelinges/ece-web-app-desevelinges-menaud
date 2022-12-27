@@ -28,7 +28,6 @@ export default function Comment({ commentID, content, userID, created_at }) {
     }, [])
 
     const handleDelete = async () => {
-
         const { data, error } = await supabase.from('comments').delete().eq('id', commentID)
         if (error) {
             console.log(error)

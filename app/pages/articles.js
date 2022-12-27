@@ -41,7 +41,9 @@ export default function ArticlesPage() {
     const trimmedContent = content.trim()
     if (trimmedTitle !== '' && trimmedContent !== '') {
       const { data, error } = await supabase.from('articles').insert([
-        { title: title,
+        {
+          userID: session.user.id,
+          title: title,
           content: content,
           autor: autorName,
         }
@@ -67,7 +69,7 @@ export default function ArticlesPage() {
       {fetchError && (<p>{fetchError}</p>)}
       <div className="flex flex-col text-center">
         {articles && (
-          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at}/>)
+          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autorID={article.userID} autor={article.autor} created_at={article.created_at}/>)
           )
         }
       </div>
