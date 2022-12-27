@@ -28,16 +28,23 @@ export default function ArticlesPage() {
     fetchData()
   }, [])
 
+  const getUsername = async () => {
+    const userData = await supabase.from('profiles').select('username').eq('id', session.user.id)
+    const username = userData.data[0].username
+    //console.log(username)
+    return username
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const autorName = await supabase.from('profiles').select('username').eq('id', session.user.id)
+    const autorName = await getUsername()
     const trimmedTitle = title.trim()
     const trimmedContent = content.trim()
     if (trimmedTitle !== '' && trimmedContent !== '') {
       const { data, error } = await supabase.from('articles').insert([
         { title: title,
           content: content,
-          autor: autorName.data[0].username,
+          autor: autorName,
         }
       ])
       if (error) {
@@ -61,7 +68,8 @@ export default function ArticlesPage() {
       {fetchError && (<p>{fetchError}</p>)}
       <div className="flex flex-col text-left">
         {articles && (
-          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} />))
+          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} reader={getUsername()}/>)
+          )
         }
       </div>
       {session && (

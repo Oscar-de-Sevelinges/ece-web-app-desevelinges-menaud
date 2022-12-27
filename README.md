@@ -90,7 +90,10 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 
 TO DO
+modifier un article par l'auteur
+supprimer un article si c'est l'user correspondant
+pareil pour commentaire
+
 LOGIN WITH GITHUB DOESN'T WORK WITH VERCEL : REDIRECT TO LOCALHOST (CHECK REDIRECT URL IN VERCEL)
-supprimer un commentaire si c'est l'user correspondant
 ajuster la taille des liens cliquable des articles
 darkmode fix
