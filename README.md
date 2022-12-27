@@ -42,46 +42,46 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 **Project management:**
 
 * Naming convention   
-  5/5
+  2/2
 * Project structure   
-  5/5 Respect du template fourni
+  2/2 Respect du template fourni
 * Git   
-  5/5 Utilisation du versioning avec git (commit, branches, pull...)
+  2/2 Utilisation du versioning avec git (commit, branches, pull...)
 * Code quality   
-  5/5 Respect des conventions d'écriture (indentation, fonctions...)
+  4/4 Respect des conventions d'écriture (indentation, fonctions...)
 * Design, UX, and content   
-  3/5 Design et expérince utilisateur basiques
+  2/4 Design et expérince utilisateur basiques
 
 **Application development:**
 
 * Home page   
   *place your graduation and comments*
 * Login and profile page   
-  *place your graduation and comments*
+  2/4 possibilité de se log avec email ou git (que en localhost pour git) et affichage du nom et du pseudo de l'utilisateur, avec possibilité de les update sur la page du profil
 * New articles creation   
-  *place your graduation and comments*
+  6/6 possibilité d'ajouter un article si l'utilisateur est log. L'article sera ajouté à la bdd et la page sera refresh avec le nouvel article
 * New comment creation   
-  *place your graduation and comments*
+  4/4 pareil que pour la création d'un nouvel article, mais sur la page de l'article avec la route dynamique (ex : /articles/:id)
 * Resource access control   
-  *place your graduation and comments*
+  x (problème d'accès à la bdd si le RLS est activé)
 * Article modification   
-  *place your graduation and comments*
+  x
 * Article removal   
-  *place your graduation and comments*
+  x
 * Comment modification   
-  *place your graduation and comments*
+  x
 * Comment removal   
-  *place your graduation and comments*
+  x
 * Account settings   
-  *place your graduation and comments*
+  3/4 possibilité de modifier les informations de l'utilisateur (nom et pseudo) et d'update la bdd
 * WYSIWYG integration   
-  *place your graduation and comments*
+  x
 * Gravatar integration   
-  *place your graduation and comments*
+  x
 * Light/dark theme   
-  5/5 Bouton pour l'activer/désactiver
+  1/2 Bouton pour l'activer/désactiver (ne s'applique pas sur les parties des pages qui nécessitent de scroll down)
 * Accent color selection   
-  *place your graduation and comments*
+  x
 
 ## Bonus
 
@@ -93,6 +93,7 @@ TO DO
 modifier un article par l'auteur
 supprimer un article si c'est l'user correspondant
 pareil pour commentaire
+mettre un compteur pour afficher le nombre de commentaires
 
 LOGIN WITH GITHUB DOESN'T WORK WITH VERCEL : REDIRECT TO LOCALHOST (CHECK REDIRECT URL IN VERCEL)
 ajuster la taille des liens cliquable des articles

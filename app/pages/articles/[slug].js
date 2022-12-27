@@ -1,4 +1,4 @@
-import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
+import { useSession, useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import moment from 'moment';
 import { useEffect, useState } from 'react';
 import supabase from '../api/supabase';

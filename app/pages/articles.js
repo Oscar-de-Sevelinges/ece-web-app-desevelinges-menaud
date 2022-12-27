@@ -31,7 +31,6 @@ export default function ArticlesPage() {
   const getUsername = async () => {
     const userData = await supabase.from('profiles').select('username').eq('id', session.user.id)
     const username = userData.data[0].username
-    //console.log(username)
     return username
   }
 
@@ -66,9 +65,9 @@ export default function ArticlesPage() {
   return (
     <div>
       {fetchError && (<p>{fetchError}</p>)}
-      <div className="flex flex-col text-left">
+      <div className="flex flex-col text-center">
         {articles && (
-          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at} reader={getUsername()}/>)
+          articles.map((article) => <Article articleID={article.id} title={article.title} content={article.content} autor={article.autor} created_at={article.created_at}/>)
           )
         }
       </div>
