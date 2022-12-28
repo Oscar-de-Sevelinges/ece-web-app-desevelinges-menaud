@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Footer from "./Footer";
 import Header from "./Header";
 
 function Layout(props) {
@@ -17,7 +16,6 @@ function Layout(props) {
                     </button>
                     <Header />
                     {props.children}
-                    <Footer />
                 </div>
             </div>
         </>

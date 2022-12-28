@@ -87,14 +87,3 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 * Task title   
   *place your graduation and comments*
-
-
-TO DO
-homepage
-modifier un article par l'auteur
-pareil pour commentaire
-fix styles des commentaires
-fix le footer
-centrer le bouton de suppression d'article
-
-darkmode fix
