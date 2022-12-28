@@ -85,5 +85,5 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 ## Bonus
 
-* TContact   
+* Contact   
   Contact us form
