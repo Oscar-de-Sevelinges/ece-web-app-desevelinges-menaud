@@ -51,13 +51,3 @@ export default function Article({ key, articleID, title, content, autorID, autor
     );
 }
 
-/*{session.user.id === autor && (
-  <Link href={'/articles/' + articleID + '/edit'}>
-    <button
-      className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
-      type="submit"
-    >
-      Edit article
-    </button>
-  </Link>
-)}*/
