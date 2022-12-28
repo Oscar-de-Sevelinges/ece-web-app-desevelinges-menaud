@@ -3,7 +3,6 @@ import moment from 'moment';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import supabase from "../pages/api/supabase";
-import Edit from "../pages/articles/edit";
 
 export default function Article({ key, articleID, title, content, autorID, autor, created_at }) {
   const createdAt = moment(created_at).format('DD/MM/YYYY');
