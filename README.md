@@ -30,7 +30,7 @@
   cd supabase
   docker compose up ...
   ```
-* sign in or log in to the app using email and password (issues with oauth providers outside localhost, on the hosted version of the website)
+* sign in or log in to the app using email and password and with oauth providers (Github)
 
 ## Authors
 
@@ -55,9 +55,9 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 **Application development:**
 
 * Home page   
-  *place your graduation and comments*
+  1/2 Homepage classique, avec une présentation de l'application
 * Login and profile page   
-  2/4 possibilité de se log avec email ou git (que en localhost pour git) et affichage du nom et du pseudo de l'utilisateur, avec possibilité de les update sur la page du profil
+  4/4 possibilité de se log avec email ou github et affichage du nom et du pseudo de l'utilisateur, avec possibilité de les update sur la page du profil
 * New articles creation   
   6/6 possibilité d'ajouter un article si l'utilisateur est log. L'article sera ajouté à la bdd et la page sera refresh avec le nouvel article
 * New comment creation   
