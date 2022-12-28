@@ -42,10 +42,10 @@ export default function Comment({ commentID, content, userID, created_at }) {
         <div className="pb-8">
             {fetchError && (<p>{fetchError}</p>)}
             {user && (
-                <p>{user.username}</p>
+                <p className="pb-6">{user.username}</p>
             )}
-            <p>{content}</p>
-            <p>{createdAt}</p>
+            <p className="pb-4">{content}</p>
+            <p className="pb-6">{createdAt}</p>
             {session && session.user.id === userID && (
                 <button
                     className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"

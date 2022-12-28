@@ -87,12 +87,14 @@ export default function ArticlesPage() {
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
-          <button
-            className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
-            type="submit"
-          >
-            Add article
-          </button>
+          <div className="pb-4">
+            <button
+              className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32 mx-auto"
+              type="submit"
+            >
+              Add article
+            </button>
+          </div>
         </form>
       )}
     </div>

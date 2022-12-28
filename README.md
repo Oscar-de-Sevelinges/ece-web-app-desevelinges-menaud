@@ -67,11 +67,11 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 * Article modification   
   x
 * Article removal   
-  x
+  2/2 possibilité pour l'auteur de supprimer son article
 * Comment modification   
   x
 * Comment removal   
-  x
+  2/2 possibilité pour l'auteur de supprimer son commentaire
 * Account settings   
   3/4 possibilité de modifier les informations de l'utilisateur (nom et pseudo) et d'update la bdd
 * WYSIWYG integration   
@@ -90,11 +90,11 @@ Romain Menaud [email](mailto:romain.menaud@edu.ece.fr)
 
 
 TO DO
+homepage
 modifier un article par l'auteur
-supprimer un article si c'est l'user correspondant
 pareil pour commentaire
-mettre un compteur pour afficher le nombre de commentaires
+fix styles des commentaires
 fix le footer
-styles des commentaires
+centrer le bouton de suppression d'article
 
 darkmode fix

@@ -37,13 +37,15 @@ export default function Article({ key, articleID, title, content, autorID, autor
           </div>
         </Link>
         {session && session.user.id === autorID && (
-          <button
-            className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32"
-            type="submit"
-            onClick={handleDelete}
-          >
-            Delete article
-          </button>
+          <div className="pt-4">
+            <button
+              className="button primary block bg-blue-500 text-white rounded-md px-4 py-2 w-32 mx-auto"
+              type="submit"
+              onClick={handleDelete}
+            >
+              Delete article
+            </button>
+          </div>
         )}
       </div>
     );
