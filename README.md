@@ -5,7 +5,7 @@
 
 ## Production
 
-- Vercel URL: https://ece-web-app-desevelinges-menaud-69njurx5p-oscarui.vercel.app/
+- Vercel URL: https://ece-web-app-desevelinges-menaud.vercel.app/
 - Supabase project URL: https://app.supabase.com/project/ffcurvlfawjgbaatfpbc
 
 ## Usage
