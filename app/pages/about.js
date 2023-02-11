@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
     return (
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Our Blogging App!</h1>
+          <h1 className="text-4xl font-bold mb-4">Hello and welcome to Our Blogging App!</h1>
           <p className="text-xl mb-4">
             Our blogging app is a project developed using Next.js, a framework for building server-rendered React applications, as well as Supabase, a realtime database platform, and Tailwind CSS, a utility-first CSS framework.
           </p>
